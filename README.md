@@ -144,9 +144,17 @@ This folder contains example screenshots used in the project README. The files b
 Screenshots included
 
 - `home-page.png` — The application form view (served at `/info.html`).
+<img width="1351" height="635" alt="home-page" src="https://github.com/user-attachments/assets/793b87fa-dc21-4a79-b830-ea4234f7bfe3" />
+  
 - `data-gatherer.png` — Application header / landing view showing the app branding.
+<img width="1349" height="634" alt="data-gatherer" src="https://github.com/user-attachments/assets/70da829d-1307-4806-9be5-fc575c7298ac" />
+  
 - `save-state.png` — Example of the form autosave or draft state stored in the browser.
+<img width="1345" height="625" alt="save-state" src="https://github.com/user-attachments/assets/faea2c2d-bdbe-4c3c-a15b-0815d413f6e9" />
+
 - `output.png` — Server or client output showing submission confirmation or console logs.
+<img width="1340" height="630" alt="output" src="https://github.com/user-attachments/assets/ecdf50e2-a563-4e85-a20e-1d82f28e5b7c" />
+
 
 
 
