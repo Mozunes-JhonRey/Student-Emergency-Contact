@@ -148,14 +148,6 @@ Screenshots included
 - `save-state.png` — Example of the form autosave or draft state stored in the browser.
 - `output.png` — Server or client output showing submission confirmation or console logs.
 
-Notes
 
-- Filenames now use dashes for better URL compatibility. If you prefer different names, tell me and I will update links in the main `README.md`.
-- To add or update screenshots, capture at ~1280px width and commit:
-
-```bash
-git add screenshots/*
-git commit -m "Add/update screenshots"
-```
 
 
