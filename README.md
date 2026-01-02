@@ -130,10 +130,3 @@ For production deployments:
 
 ---
 
-If you'd like, I can:
-
-- add a short changelog entry,
-- produce a trimmed README for a public repository (without local paths), or
-- include example curl requests for each API endpoint.
-
-Please tell me which you'd prefer.
