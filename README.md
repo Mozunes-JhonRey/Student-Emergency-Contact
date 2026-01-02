@@ -155,6 +155,11 @@ Screenshots included
 - `output.png` — Server or client output showing submission confirmation or console logs.
 <img width="1340" height="630" alt="output" src="https://github.com/user-attachments/assets/ecdf50e2-a563-4e85-a20e-1d82f28e5b7c" />
 
+-ER DIAGRAM
+<img width="448" height="487" alt="EEER_Diagram" src="https://github.com/user-attachments/assets/6523c6d8-3814-47bc-9486-897eeda3f655" />
+
+
+
 
 
 
