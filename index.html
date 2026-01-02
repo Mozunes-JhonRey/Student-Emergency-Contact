@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="description" content="Dashboard to view and manage student emergency contact information" />
+	<title>Student Emergency Contact</title>
+	<link rel="stylesheet" href="styles/common.css" />
+	<link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+	<main class="wrap" role="main">
+		<div class="header">
+			<div>
+				<h1>Data Dashboard</h1>
+				<p class="lead">Manage all submitted data</p>
+			</div>
+			<div class="button-group">
+				<button class="success" onclick="window.location.href='info.html'">➕ Add New Data</button>
+				<button onclick="loadData()">🔄 Refresh</button>
+				<button class="danger" onclick="deleteAllData()" title="Delete all records and reset ID counter">🗑️ Clear All</button>
+			</div>
+		</div>
+
+		<div class="stats" id="stats"></div>
+
+		<div class="table-container">
+			<table id="dataTable">
+				<thead>
+					<tr>
+						<th style="width:50px">ID</th>
+						<th>Name</th>
+						<th>Address</th>
+						<th>Birthday</th>
+						<th>Phone</th>
+						<th>Guardian</th>
+						<th>Created</th>
+						<th style="width:140px">Actions</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">
+					<tr>
+						<td colspan="8" class="loading">
+							<div class="spinner"></div>
+							<p>Loading data...</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+
+	<div class="toast" id="toast"></div>
+
+	<script src="scripts/index.js" defer></script>
+</body>
+</html>

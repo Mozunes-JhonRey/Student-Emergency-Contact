@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Data Gatherer</title>
+	<link rel="stylesheet" href="styles/common.css" />
+	<link rel="stylesheet" href="styles/info.css" />
+</head>
+<body>
+	<main class="wrap" role="main">
+		<div class="header">
+			<div>
+				<h1>Data Gatherer</h1>
+				<p class="lead">Collect basic personal and guardian contact details. Fields marked * are required.</p>
+			</div>
+			<button class="secondary" onclick="window.location.href='index.html'">← Back to Dashboard</button>
+		</div>
+
+		<form id="gatherForm" autocomplete="on">
+			<label for="name">Full name *</label>
+			<input id="name" name="name" type="text" required aria-required="true" />
+
+			<label for="address">Address *</label>
+			<textarea id="address" name="address" required aria-required="true" placeholder="Street, City, State, ZIP"></textarea>
+
+			<div class="row">
+				<div>
+					<label for="birthday">Birthday *</label>
+					<input id="birthday" name="birthday" type="date" required aria-required="true" />
+				</div>
+				<div>
+					<label for="phone">Phone *</label>
+					<input id="phone" name="phone" type="tel" required placeholder="+63" />
+				</div>
+			</div>
+
+			<label for="guardian_name">Guardian / Emergency contact name</label>
+			<input id="guardian_name" name="guardian_name" type="text" placeholder="Parent or guardian" />
+
+			<label for="guardian_phone">Guardian / Emergency contact phone</label>
+			<input id="guardian_phone" name="guardian_phone" type="tel" placeholder="+63" />
+
+			<div class="actions">
+				<button type="submit">Submit</button>
+				<div class="muted">Drafts saved locally while typing. Submissions POST to <code>/api/submissions</code>.</div>
+			</div>
+
+			<div id="formError" class="error" aria-live="polite"></div>
+		</form>
+	</main>
+
+	<div id="toast" class="toast" role="status" aria-live="polite"></div>
+	<script src="scripts/info.js" defer></script>
+</body>
+</html>

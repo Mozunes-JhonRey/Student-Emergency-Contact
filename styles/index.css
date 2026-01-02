@@ -1,0 +1,209 @@
+/* ============================================
+   DASHBOARD PAGE STYLES - Table and Data Display
+   ============================================ */
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 32px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid var(--border-color);
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.header > div:first-child {
+	flex: 1;
+}
+
+.button-group {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+/* ============================================
+   STATISTICS CARDS
+   ============================================ */
+
+.stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 16px;
+	margin-bottom: 32px;
+}
+
+.stat-card {
+	background: linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%);
+	padding: 24px;
+	border-radius: 8px;
+	color: #fff;
+	box-shadow: var(--shadow-sm);
+	transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+	transform: translateY(-4px);
+}
+
+.stat-value {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+}
+
+.stat-label {
+	font-size: 13px;
+	margin-top: 6px;
+	opacity: 0.9;
+}
+
+/* ============================================
+   TABLE STYLES
+   ============================================ */
+
+.table-container {
+	overflow-x: auto;
+	border-radius: 8px;
+	border: 1px solid var(--border-color);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+}
+
+thead {
+	background: var(--bg-secondary);
+	border-bottom: 1px solid var(--border-color);
+}
+
+th {
+	padding: 16px 14px;
+	text-align: left;
+	font-weight: 600;
+	color: var(--text-primary);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+td {
+	padding: 16px 14px;
+	border-bottom: 1px solid var(--border-color);
+	font-size: 14px;
+}
+
+tbody tr {
+	transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+	background: var(--bg-secondary);
+}
+
+.actions {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.actions button {
+	padding: 8px 12px;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.empty {
+	text-align: center;
+	padding: 60px 40px;
+	color: var(--text-secondary);
+}
+
+.empty-icon {
+	font-size: 56px;
+	margin-bottom: 16px;
+}
+
+.empty a {
+	color: var(--accent);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.empty a:hover {
+	text-decoration: underline;
+}
+
+/* ============================================
+   LOADING STATE
+   ============================================ */
+
+.loading {
+	text-align: center;
+	padding: 40px;
+	color: var(--text-secondary);
+}
+
+.spinner {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: 3px solid var(--border-color);
+	border-top-color: var(--accent);
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.button-group {
+		width: 100%;
+	}
+
+	button {
+		flex: 1;
+		min-width: 0;
+	}
+
+	table {
+		font-size: 13px;
+	}
+
+	th,
+	td {
+		padding: 12px 10px;
+	}
+
+	.stat-card {
+		padding: 20px;
+	}
+
+	.stat-value {
+		font-size: 28px;
+	}
+
+	.empty {
+		padding: 40px 24px;
+	}
+}
